@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+</head>
+<body>
+    <h1>Fight Simulator</h1>
+    <!-- Boutons pour sélectionner une arme pour chaque personnage -->
+<button id="btnArmeConan1">Équiper Épée Légendaire (Conan)</button>
+<button id="btnArmeConan2">Équiper Arc Mystique (Conan)</button>
+<button id="btnArmeConan3">Équiper Hache de Guerre (Conan)</button>
+
+<button id="btnArmeMerlin1">Équiper Épée Légendaire (Merlin)</button>
+<button id="btnArmeMerlin2">Équiper Arc Mystique (Merlin)</button>
+<button id="btnArmeMerlin3">Équiper Hache de Guerre (Merlin)</button>
+    <button id="btnConan">Attaque de Conan</button>
+    <button id="btnConanSpe">Attaque Spéciale de Conan</button>
+    <button id="btnConanSoin">Soin de Conan</button>
+    <br>
+    <button id="btnMerlin">Attaque de Merlin</button>
+    <button id="btnMerlinSpe">Attaque Spéciale de Merlin</button>
+    <button id="btnMerlinSoin">Soin de Merlin</button>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 255, 0, 0.6);
+            margin-bottom: 30px;
+            color: #ffcc00;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 60%;
+            max-width: 800px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+        }
+
+        #btnConan {
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+            color: white;
+        }
+
+        #btnConanSpe {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: white;
+        }
+
+        #btnConanSoin {
+            background: linear-gradient(45deg, #00b09b, #96c93d);
+            color: white;
+        }
+
+        #btnMerlin {
+            background: linear-gradient(45deg, #ffbc00, #ff5733);
+            color: white;
+        }
+
+        #btnMerlinSpe {
+            background: linear-gradient(45deg, #e63946, #f1faee);
+            color: white;
+        }
+
+        #btnMerlinSoin {
+            background: linear-gradient(45deg, #7d5fff, #00c9ff);
+            color: white;
+        }
+        .cooldown {
+        animation: pulsationCooldown 1.5s infinite ease-in-out;
+        opacity: 0.5;
+    }
+
+    @keyframes pulsationCooldown {
+        0% {
+            transform: scale(1);
+            opacity: 0.5;
+        }
+        50% {
+            transform: scale(0.9);
+            opacity: 0.8;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 0.5;
+        }
+    }
+    </style>
+    
+    <script src="fightSimulator.js" type="module"></script>
+</body>
+</html>
